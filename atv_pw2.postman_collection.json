@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "693dbe09-57a5-4836-8a46-d478b07655ba",
+		"name": "atv_pw2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29029790"
+	},
+	"item": [
+		{
+			"name": "controller",
+			"item": [
+				{
+					"name": "ProdutoController",
+					"item": [
+						{
+							"name": "CadastrarProduto",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/produto/cadastrarProduto",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"produto",
+										"cadastrarProduto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarProduto",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/produto/listarProduto",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"produto",
+										"listarProduto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AlterarProduto",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/produto/alterarProduto",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"produto",
+										"alterarProduto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ExcluirProduto",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/produto/excluirProduto",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"produto",
+										"excluirProduto"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CategoriaController",
+					"item": [
+						{
+							"name": "CadastrarCategoria",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/categoria/cadastrarCategoria",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"categoria",
+										"cadastrarCategoria"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarCategoria",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/categoria/listarCategoria",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"categoria",
+										"listarCategoria"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AlterarCategoria",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/categoria/alterarCategoria",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"categoria",
+										"alterarCategoria"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ExcluirCategoria",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/categoria/excluirCategoria",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"categoria",
+										"excluirCategoria"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
