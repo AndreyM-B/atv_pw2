@@ -2,6 +2,8 @@ const sequelize = require("sequelize");
 
 const connection = require("../database/database");
 
+const Categoria = require('./Categoria');
+
 const Produto = connection.define(
         'tbl_produto',
         {
@@ -10,6 +12,10 @@ const Produto = connection.define(
                         unsigned: true,
                         autoIncrement: true,
                         primaryKey: true
+                },
+                codigo_categoria: {
+                        type: sequelize.INTEGER,
+                        allowNull: false
                 },
                 nome_produto: {
                         type: sequelize.STRING(255),
@@ -23,14 +29,30 @@ const Produto = connection.define(
                         type: sequelize.STRING(500),
                         allowNull: false
                 },
+                imagem_produto_url: {
+                        type: sequelize.STRING(500),
+                        allowNull: false
+                },
                 descricao_produto: {
                         type: sequelize.TEXT,
                         allowNull: false
                 }
         }
-)
+);
 
-Produto.sync({force:false});
+Categoria.hasMany(Produto, {
+        foreignKey: 'codigo_categoria',
+        sourceKey: 'codigo_categoria'
+});
+
+
+/*Implementação da  CHAVE PRIMÁRIA - LADO 1*/
+Produto.belongsTo(Categoria, {
+        foreignKey: 'codigo_categoria',
+        sourceKey: 'codigo_categoria'
+});
+
+Produto.sync({ force: false });
 
 module.exports = Produto;
 

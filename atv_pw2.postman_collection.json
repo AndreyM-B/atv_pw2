@@ -17,6 +17,41 @@
 							"request": {
 								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/C:/Users/andrey_23781/Pictures/mochila.jpg"
+										},
+										{
+											"key": "nome_produto",
+											"value": "Mochila Tática Exército Americano",
+											"type": "text"
+										},
+										{
+											"key": "valor_produto",
+											"value": "1200",
+											"type": "text"
+										},
+										{
+											"key": "descricao_produto",
+											"value": "Mochila do exercito americano",
+											"type": "text"
+										},
+										{
+											"key": "codigo_produto",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "codigo_categoria",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
 								"url": {
 									"raw": "http://localhost:3000/produto/cadastrarProduto",
 									"protocol": "http",
@@ -53,32 +88,12 @@
 							"response": []
 						},
 						{
-							"name": "AlterarProduto",
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:3000/produto/alterarProduto",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "3000",
-									"path": [
-										"produto",
-										"alterarProduto"
-									]
-								}
-							},
-							"response": []
-						},
-						{
 							"name": "ExcluirProduto",
 							"request": {
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:3000/produto/excluirProduto",
+									"raw": "http://localhost:3000/produto/excluirProduto/2",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -86,7 +101,8 @@
 									"port": "3000",
 									"path": [
 										"produto",
-										"excluirProduto"
+										"excluirProduto",
+										"2"
 									]
 								}
 							},
@@ -102,6 +118,15 @@
 							"request": {
 								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome_categoria\": \"RELOGIOS\",\r\n    \"observacoes_categoria\":\"Para ver as horas.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "http://localhost:3000/categoria/cadastrarCategoria",
 									"protocol": "http",
@@ -142,6 +167,15 @@
 							"request": {
 								"method": "PUT",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codigo_categoria\": 2,\r\n    \"nome_categoria\": \"MOCHILAS\",\r\n    \"observacoes_categoria\":\"Serve para guardar e carregar coisas\"    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "http://localhost:3000/categoria/alterarCategoria",
 									"protocol": "http",
@@ -163,7 +197,7 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:3000/categoria/excluirCategoria",
+									"raw": "http://localhost:3000/categoria/excluirCategoria/3",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -171,7 +205,8 @@
 									"port": "3000",
 									"path": [
 										"categoria",
-										"excluirCategoria"
+										"excluirCategoria",
+										"3"
 									]
 								}
 							},
